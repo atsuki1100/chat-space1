@@ -1,6 +1,12 @@
 .sideber
   .sideber__user
-    %p サンプルユーザー
+    .user-name
+      %p サンプルユーザー
+    .user-menu
+      .user-menu__edit-user
+        =  link_to " " , " ", class: " class-name fa fa-edit "
+      .user-menu__new__group
+        = link_to " ", " ", class: " class-name fas fa-cog "
   .sideber__group
     .sideber__group--name
       .name

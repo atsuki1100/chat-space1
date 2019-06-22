@@ -12,6 +12,13 @@
     width: 100%;
     font-weight: bold;
     box-sizing: border-box;
+    .user-name {
+      margin: 0;
+      padding: 0;
+    }
+    .user-menu {
+      display: flex;
+    }
   }
   &__group {
     height: calc(100vh - 100px);
