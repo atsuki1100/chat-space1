@@ -18,6 +18,20 @@
     }
     .user-menu {
       display: flex;
+      &__edit-user {
+        margin-left: 0.3rem;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+      &__new-group {
+        margin-left: 0.3rem;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
     }
   }
   &__group {
