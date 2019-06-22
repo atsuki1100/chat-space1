@@ -7,8 +7,7 @@
         サンプルグループ
       %p.member
         Member: メンバー1,メンバー2,メンバー3
-    .edit
-      .edit__btn= link_to "Edit"
+    .edit= link_to "Edit"
   .chat-main__contents
     .chat-main__contents--message
       .nickname
@@ -21,9 +20,7 @@
       %p.nickname__time 2222/22/22(sample) 22:22:22
       %p.comment コメント2
   .chat-main__form
-    %form.new-message
-      .chat-main__form-message
+    .new-message
+      .form-message
         %input.input-box{:type => "text",:placeholder => "type a text"}
-          
-      .chat-main__form-sent
-        %input.submit-btn{:type => "submit",:value => "Send"}
+      %input.submit-btn{:type => "submit",:value => "Send"}

@@ -23,17 +23,14 @@
       }
     }
     .edit {
-      &__btn {
-        height: 40px;
-        line-height: 40px;
-        padding: 0 20px;
-        margin-top: 30px;
-        border: solid 1px #38aef0;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      a {
         color: #38aef0;
-        a {
-          text-decoration: none;
-          color: #38aef0;
-        }
+        text-decoration: none;
       }
     }
   }
@@ -71,5 +68,29 @@
     padding: 20px 40px;
     background-color: #ddd;
     box-sizing: border-box;
+    .new-message {
+      display: flex;
+      .form-message {
+        position: relative;
+        width: 100%;
+        .input-box {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: #434a54;
+          border-style: none;
+          box-sizing: border-box;
+        }
+      }
+      .submit-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        box-sizing: border-box;
+      }
+    }
   }
 }
