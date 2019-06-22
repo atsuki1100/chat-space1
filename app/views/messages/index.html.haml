@@ -22,7 +22,8 @@
   .chat-main__form
     .new-message
       .form-message
-        %input.input-box{:type => "text",:placeholder => "type a text "}
-        .fot
-          = link_to " ", " ", class: " class-name fas fa-chart-area "
+        %input.input-box{:type => "text",:placeholder => "type a message "}
+        %label.sent-image
+          %button.fot
+            = link_to " ", " ", class: " class-name fa fa-image "
       %input.submit-btn{:type => "submit",:value => "Send"}
