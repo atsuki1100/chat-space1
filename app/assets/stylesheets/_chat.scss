@@ -1,0 +1,41 @@
+.chat-main {
+  width: calc(100vw - 300px);
+  float: left;
+  &__header {
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eee;
+  }
+  &__contents {
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+    overflow: scroll;
+    box-sizing: border-box;
+    &__messege {
+      padding-bottom: 40px;
+      &__nickname{
+        display: flex;
+        margin-bottom: 10px;
+        &__sampleuser {
+           color: #434a54;
+           font-size: 16px;
+           font-weight: bold;
+        }
+        &__time {
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  &__form {
+    height: 90px;
+    padding: 20px 40px;
+    background-color: #ddd;
+    box-sizing: border-box;
+  }
+}
