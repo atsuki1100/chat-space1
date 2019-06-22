@@ -16,12 +16,13 @@
       %p.comment コメント
     .chat-main__contents--message
       .nickname
-      %p.nickname__user サンプルユーザー2
-      %p.nickname__time 2222/22/22(sample) 22:22:22
+        %p.nickname__user サンプルユーザー2
+        %p.nickname__time 2222/22/22(sample) 22:22:22
       %p.comment コメント2
   .chat-main__form
     .new-message
       .form-message
-        %input.input-box{:type => "text",:placeholder => "type a text"}
-          %label.font= link_to " ", " ", class: " class-name fas fa-chart-area "
+        %input.input-box{:type => "text",:placeholder => "type a text "}
+        .fot
+          = link_to " ", " ", class: " class-name fas fa-chart-area "
       %input.submit-btn{:type => "submit",:value => "Send"}
