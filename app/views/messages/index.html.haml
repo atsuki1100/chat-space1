@@ -20,11 +20,11 @@
         %p.nickname__user サンプルユーザー2
         %p.nickname__time 2222/22/22(sample) 22:22:22
       %p.comment コメント2
-  .chat-main__form
-    .new-message
-      .form-message
-        %input.input-box{:type => "text",:placeholder => "type a message "}
-        %label.sent-image
-          %button.fot
-            = link_to " ", " ", class: " class-name fa fa-image "
-      %input.submit-btn{:type => "submit",:value => "Send"}
+  .form
+    = form_for [@group, @message] do |f|
+      .input-box
+        = f.text_field :content, class: 'form-message', placeholder: 'type a message'
+        = f.label :image, class: 'image-label' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form-submit'
