@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+  before_action :det_group, onry: [:edit, :update]
+
   def index
   end
 
