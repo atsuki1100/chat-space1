@@ -42,12 +42,16 @@
     box-sizing: border-box;
     &--name {
       margin-bottom: 40px;
-      .name {
+      .group-name {
         font-size: 15px;
         margin-bottom: 5px;
+        color: white;
+        text-decoration: none;
       }
-      .comment {
+      .group-message {
         font-size: 11px;
+        color: white;
+        text-decoration: none;
       }
     }
   }
