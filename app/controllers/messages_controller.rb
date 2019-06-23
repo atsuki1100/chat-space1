@@ -4,4 +4,9 @@ class MessagesController < ApplicationController
 
   def create
   end
+
+  private
+  def
+  end
+
 end
