@@ -11,12 +11,9 @@
           = fa_icon 'cog', class: 'icon'
   .sideber__group
     .sideber__group--name
-      .name
-        サンプルグループ
-      .comment
-        おはようございます
-    .sideber__group--name
-      .name
-        サンプルグループ2
-      .comment
-        こんにちは
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
