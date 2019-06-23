@@ -10,16 +10,7 @@
     .edit
       = link_to "Edit"
   .chat-main__contents
-    .chat-main__contents--message
-      .nickname
-        %p.nickname__user サンプルユーザー
-        %p.nickname__time 1111/11/11(sample) 11:11:11
-      %p.comment コメント
-    .chat-main__contents--message
-      .nickname
-        %p.nickname__user サンプルユーザー2
-        %p.nickname__time 2222/22/22(sample) 22:22:22
-      %p.comment コメント2
+    = render @messages
   .form
     = form_for [@group, @message] do |f|
       .input-box
