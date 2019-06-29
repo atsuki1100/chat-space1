@@ -33,6 +33,7 @@ $(function() {
       var html = buildHTML(data);
       $('.chat-main__contents').append(html)
       $('.form-message').val('')
+      $('.chat-main__contents').animate({ scrollTop: $('.chat-main__contents')[0].scrollHeight});
     })
     .fail(function(data) {
       alert('エラーが発生しました。')
