@@ -37,5 +37,8 @@ $(function() {
     .fail(function(data) {
       alert('エラーが発生しました。')
     })
+    .always(function(data){
+      $('.form-submit').prop('disabled', false);
+    })
   })
 });
