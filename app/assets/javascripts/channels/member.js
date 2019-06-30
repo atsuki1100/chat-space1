@@ -3,16 +3,18 @@ $(function() {
     
     var chat_group_list = $("#chat-group-users");
 
-    function appendUser(user) {
+    function appendUser(result) {
       var html = `<div class="chat-group-user clearfix">
-                    <p class="chat-group-user__name">${user.name}</p>
-                    <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
+                    <p class="chat-group-user__name">${result.userName}</p>
+                    <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${ result.userId }" data-user-name="${result.userName}">削除</div>
                   </div>`
       chat_group_list.append(html);
     }
 
 
     var user = e.target
-      appendUser(user)
+    const result = $(user).data();
+ 
+      appendUser(result)
   });
 })
