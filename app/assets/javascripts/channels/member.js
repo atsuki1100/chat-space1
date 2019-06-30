@@ -20,4 +20,8 @@ $(function() {
 
       $(this).parent().remove();
   });
+  $(document).on("click", '.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn', function (e) {
+    var user = e.target
+    $(this).parent().remove();
+  })
 });
