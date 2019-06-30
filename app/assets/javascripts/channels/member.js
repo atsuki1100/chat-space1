@@ -4,9 +4,10 @@ $(function() {
     var chat_group_list = $("#chat-group-users");
 
     function appendUser(result) {
-      var html = `<div class="chat-group-user clearfix">
-                    <p class="chat-group-user__name">${result.userName}</p>
-                    <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${ result.userId }" data-user-name="${result.userName}">削除</div>
+      var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
+                    <input name='group[user_ids][]' type='hidden' value= '${result.userId}' id= 'group_user_ids' >
+                    <p class='chat-group-user__name'>${result.userName}</p>
+                    <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
                   </div>`
       chat_group_list.append(html);
     }
@@ -17,4 +18,4 @@ $(function() {
  
       appendUser(result)
   });
-})
+});
