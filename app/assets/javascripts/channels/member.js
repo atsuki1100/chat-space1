@@ -17,5 +17,7 @@ $(function() {
     const result = $(user).data();
  
       appendUser(result)
+
+      $(this).parent().remove();
   });
 });
