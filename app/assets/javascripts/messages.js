@@ -66,7 +66,7 @@ $(function() {
       $('.chat-main__contents').animate({scrollTop: $('.chat-main__contents')[0].scrollHeight}, 'fast');
     })
     .fail(function() {
-      console.log('error');
+      alert('エラーが発生しました。')
     });
   };
   setInterval(reloadMessages, 5000);
