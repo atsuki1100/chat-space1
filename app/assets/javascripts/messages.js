@@ -2,7 +2,7 @@ $(function() {
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : " ";
     var img = message.image.url ? `<img class="lower-message__image" src= ${ message.image }>` : " ";
-    var html =  `<div class="chat-main__contents--message">
+    var html =  `<div class="chat-main__contents--message" "data-id= '${message.id}' >
                    <div class="nickname">
                      <div class="nickname__user">
                        ${ message.user_name }
@@ -45,4 +45,28 @@ $(function() {
       $('.form-submit').prop('disabled', false);
     })
   })
+  var reloadMessages = function() {
+    //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
+    last_message_id = $('.chat-main__contents--message:last').data('id');
+    $.ajax({
+      //ルーティングで設定した通りのURLを指定
+      url: 'api/messages',
+      //ルーティングで設定した通りhttpメソッドをgetに指定
+      type: 'get',
+      dataType: 'json',
+      //dataオプションでリクエストに値を含める
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      messages.forEach(function(message){
+        var insertHTML = buildHTML(message)
+        $('.chat-main__contents').append(insertHTML)
+      });
+      $('.chat-main__contents').animate({scrollTop: $('.chat-main__contents')[0].scrollHeight}, 'fast');
+    })
+    .fail(function() {
+      console.log('error');
+    });
+  };
+  setInterval(reloadMessages, 5000);
 });

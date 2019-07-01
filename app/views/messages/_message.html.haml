@@ -1,10 +1,10 @@
-.chat-main__contents--message
+.chat-main__contents--message{data: {id: message.id}}
   .nickname
     .nickname__user 
       = message.user.name
     .nickname__time
       = message.created_at.strftime("%Y/%m/%d %H:%M")
-  .comment{data: {id: message.id}}
+  .comment
     - if message.content.present?
       %p.lower-message__content
         = message.content
