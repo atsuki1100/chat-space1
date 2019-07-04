@@ -32,7 +32,6 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
-end
 
   desc 'upload secrets.yml'
   task :upload do
