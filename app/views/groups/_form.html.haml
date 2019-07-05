@@ -34,7 +34,10 @@
       #chat-group-users
         #chat-group-user-22.chat-group-user.clearfix
           %input#group_user_ids{:name => "group[user_ids][]", :type => "hidden", :value => current_user.id }
-          %p.chat-group-user__name #{current_user.name}
+          - @group.users.each do |user|
+            -# %p.chat-group-user__name #{current_user.name}
+            %p.chat-group-user.crearfix.js-chat-member
+              =user.name
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
